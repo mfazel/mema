@@ -1,10 +1,44 @@
 FROM rocker/rstudio:latest
 
 RUN apt-get update -qq && \
+#    apt-get install -y \
+#    zlib1g-dev \
+#    libssh2-1-dev \
+#    libxml2-dev
+
     apt-get install -y \
-    zlib1g-dev \
-    libssh2-1-dev \
-    libxml2-dev
+    biblatex \
+    curl \
+    jags \
+    libatlas3gf-base \
+    libcairo2 \
+    libcairo2-dev \
+    libfftw3-dev \
+    libgdal1-dev \
+    libgraphviz-dev \
+    libmyodbc \
+    libmysqlclient15-dev \
+    libnetcdf-dev \
+    libproc-dev \
+    libproj-dev \
+    libprotoc-dev \
+    libxml2-dev \
+    libxt-dev \
+    libxt6 \
+    lsb-release \
+    odbc-postgresql \
+    protobuf-compiler \
+    sudo \
+    tdsodbc \
+    texinfo \
+    texlive \
+    texlive-bibtex-extra \
+    texlive-fonts-extra \
+    texlive-latex-extra \
+    texlive-xetex \
+    unixodbc \
+    unixodbc-dev \
+    wget
 
 ## (2) Install base R, dependencies for MEMA, and lastly, MEMA itself.
 RUN R -e "install.packages(c('devtools'), repos = 'http://cran.us.r-project.org')"
