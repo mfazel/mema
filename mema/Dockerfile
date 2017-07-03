@@ -1,12 +1,12 @@
 FROM rocker/rstudio:latest
 
 RUN apt-get update -qq && \
-#    apt-get install -y \
-#    zlib1g-dev \
-#    libssh2-1-dev \
-#    libxml2-dev
-
     apt-get install -y \
+    zlib1g-dev \
+    libssh2-1-dev \
+    libxml2-dev
+
+#    apt-get install -y \
     biblatex \
     curl \
     jags \
