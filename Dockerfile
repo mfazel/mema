@@ -19,9 +19,9 @@ RUN apt-get update -qq && \
     libmyodbc \
     libmysqlclient15-dev \
     libnetcdf-dev \
-    libproc-dev \
+#    libproc-dev \
     libproj-dev \
-#    libprotoc-dev \
+    libprotoc-dev \
     libxml2-dev \
     libxt-dev \
     libxt6 \
