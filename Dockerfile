@@ -7,7 +7,7 @@ RUN apt-get update -qq && \
     libxml2-dev \
 
 #    apt-get install -y \
-    biblatex \
+#    biblatex \
     curl \
     jags \
     libatlas3gf-base \
@@ -21,7 +21,7 @@ RUN apt-get update -qq && \
     libnetcdf-dev \
     libproc-dev \
     libproj-dev \
-    libprotoc-dev \
+#    libprotoc-dev \
     libxml2-dev \
     libxt-dev \
     libxt6 \
