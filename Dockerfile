@@ -11,7 +11,6 @@ RUN apt-get update -qq && \
     zlib1g-dev \
     libssh2-1-dev \
     libxml2-dev \
-    apt-get install -y \
     curl \
     jags \
     libcairo2 \
