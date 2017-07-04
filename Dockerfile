@@ -10,14 +10,14 @@ RUN apt-get update -qq && \
 #    biblatex \
     curl \
     jags \
-    libatlas3gf-base \
+#    libatlas3gf-base \
     libcairo2 \
     libcairo2-dev \
     libfftw3-dev \
-    libgdal1-dev \
+#    libgdal1-dev \
     libgraphviz-dev \
-    libmyodbc \
-    libmysqlclient15-dev \
+#    libmyodbc \
+#    libmysqlclient15-dev \
     libnetcdf-dev \
 #    libproc-dev \
     libproj-dev \
@@ -47,7 +47,8 @@ RUN R -e "devtools::install_github('MEP-LINCS/MEMA')"
 
 
 ## (3) Install the rest of R packages for running MEMA vignettes 
-RUN R -e "source('http://depot.sagebase.org/CRAN.R'); pkgInstall('synapseClient')"
+# RUN R -e "source('http://depot.sagebase.org/CRAN.R'); pkgInstall('synapseClient')"
+RUN R -e "devtools::install_github('Sage-Bionetworks/rSynapseClient')"
 RUN R -e "install.packages('ggplot2', repos = 'http://cran.us.r-project.org')"
 RUN R -e "source('http://bioconductor.org/biocLite.R'); biocLite('RUVnormalize')"
 RUN R -e "install.packages(c('ruv', 'plotly', 'RColorBrewer'), repos = 'http://cran.us.r-project.org')"
