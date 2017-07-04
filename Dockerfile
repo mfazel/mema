@@ -6,7 +6,7 @@ RUN apt-get update -qq && \
     libssh2-1-dev \
     libxml2-dev \
 
-#    apt-get install -y \
+    apt-get install -y \
 #    biblatex \
     curl \
     jags \
