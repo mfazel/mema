@@ -7,13 +7,13 @@ FROM rocker/rstudio-stable:devel
 #    libmysqlclient15-dev \
 #    libproc-dev \
 
-#RUN apt-get update -qq && \
-#    apt-get install -y \
-#    zlib1g-dev \
-#    libssh2-1-dev \
-#    libxml2-dev \
-#    curl \
-#    jags \
+RUN apt-get update -qq && \
+    apt-get install -y \
+    zlib1g-dev \
+    libssh2-1-dev \
+    libxml2-dev \
+    curl \
+    jags \
 #    libcairo2 \
 #    libcairo2-dev \
 #    libfftw3-dev \
@@ -21,7 +21,6 @@ FROM rocker/rstudio-stable:devel
 #    libnetcdf-dev \
 #    libproj-dev \
 #    libprotoc-dev \
-#    libxml2-dev \
 #    libxt-dev \
 #    libxt6 \
 #    lsb-release \
