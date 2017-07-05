@@ -1,4 +1,5 @@
-FROM rocker/rstudio:latest
+FROM rocker/rstudio-stable:devel
+#FROM rocker/rstudio:latest
 #    biblatex \
 #    libatlas3gf-base \
 #    libgdal1-dev \
