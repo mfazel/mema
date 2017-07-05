@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
     libssh2-1-dev \
     libxml2-dev \
     curl \
-    jags \
+#    jags \
 #    libcairo2 \
 #    libcairo2-dev \
 #    libfftw3-dev \
@@ -52,4 +52,5 @@ RUN R -e "source('http://bioconductor.org/biocLite.R'); biocLite('RUVnormalize')
 RUN R -e "install.packages(c('ruv', 'plotly', 'RColorBrewer'), repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('lme4', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('png', repos = 'http://cran.us.r-project.org')"
-RUN R -e "install.packages(c('flexmix', 'fpc', 'dendextend', 'd3heatmap'), repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages(c('flexmix', 'fpc', 'dendextend'), repos = 'http://cran.us.r-project.org')"
+#RUN R -e "install.packages('d3heatmap', repos = 'http://cran.us.r-project.org')"
