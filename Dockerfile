@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
     libssh2-1-dev \
     libxml2-dev \
     curl \
-    jags \
+    jags
 #    libcairo2 \
 #    libcairo2-dev \
 #    libfftw3-dev \
