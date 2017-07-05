@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
     libssh2-1-dev \
     libxml2-dev \
     curl \
-    jags
+    jags \
 #    libcairo2 \
 #    libcairo2-dev \
 #    libfftw3-dev \
@@ -26,7 +26,7 @@ RUN apt-get update -qq && \
 #    lsb-release \
 #    odbc-postgresql \
 #    protobuf-compiler \
-#    sudo \
+    sudo \
 #    tdsodbc \
 #    texinfo \
 #    texlive \
@@ -36,7 +36,7 @@ RUN apt-get update -qq && \
 #    texlive-xetex \
 #    unixodbc \
 #    unixodbc-dev \
-#    wget
+    wget
 
 ## (2) Install base R, dependencies for MEMA, and lastly, MEMA itself.
 RUN R -e "install.packages(c('devtools'), repos = 'http://cran.us.r-project.org')"
