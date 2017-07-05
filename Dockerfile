@@ -13,7 +13,7 @@ RUN apt-get update -qq && \
     libssh2-1-dev \
     libxml2-dev \
     curl \
-    libpng-devel \
+    libpng-dev \
 #    jags \
 #    libcairo2 \
 #    libcairo2-dev \
@@ -46,7 +46,7 @@ RUN R -e "devtools::install_github('MEP-LINCS/MEMA')"
 
 
 ## (3) Install the rest of R packages for running MEMA vignettes 
- RUN R -e "source('http://depot.sagebase.org/CRAN.R'); pkgInstall('synapseClient')"
+RUN R -e "source('http://depot.sagebase.org/CRAN.R'); pkgInstall('synapseClient')"
 RUN R -e "devtools::install_github('Sage-Bionetworks/rSynapseClient')"
 RUN R -e "install.packages('ggplot2', repos = 'http://cran.us.r-project.org')"
 RUN R -e "source('http://bioconductor.org/biocLite.R'); biocLite('RUVnormalize')"
