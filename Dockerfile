@@ -43,7 +43,8 @@ RUN apt-get update -qq && \
 RUN R -e "install.packages(c('devtools'), repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages(c('data.table', 'gdata', 'reshape2', 'XML', 'mclust', 'dplyr', 'stringr', 'magrittr'), repos = 'http://cran.us.r-project.org')"
 #RUN R -e "devtools::install_github('MEP-LINCS/MEMA')"
-RUN R -e "devtools::install_github('MEP-LINCS/MEMA', ref='develop')"
+#RUN R -e "devtools::install_github('MEP-LINCS/MEMA', ref='develop')"
+RUN R -e "devtools::install_github('MEP-LINCS/MEMA@v0.5.0')"
 
 
 ## (3) Install the rest of R packages for running MEMA vignettes 
