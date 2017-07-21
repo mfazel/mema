@@ -1,4 +1,4 @@
-FROM rocker/rstudio-stable:3.4.0
+FROM rocker/rstudio-stable:devel
 #FROM rocker/rstudio:latest
 #    biblatex \
 #    libatlas3gf-base \
