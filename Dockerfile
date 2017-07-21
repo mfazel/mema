@@ -1,4 +1,4 @@
-FROM rocker/rstudio-stable:devel
+FROM rocker/rstudio-stable:3.4.0
 #FROM rocker/rstudio:latest
 #    biblatex \
 #    libatlas3gf-base \
@@ -44,8 +44,8 @@ RUN R -e "install.packages(c('devtools'), repos = 'http://cran.us.r-project.org'
 RUN R -e "install.packages(c('data.table', 'gdata', 'reshape2', 'XML', 'mclust', 'dplyr', 'stringr', 'magrittr'), repos = 'http://cran.us.r-project.org')"
 #RUN R -e "devtools::install_github('MEP-LINCS/MEMA')"
 #RUN R -e "devtools::install_github('MEP-LINCS/MEMA', ref='develop')"
-RUN R -e "devtools::install_github('MEP-LINCS/MEMA@v0.5.0')"
-
+#RUN R -e "devtools::install_github('MEP-LINCS/MEMA@v0.5.0')"
+RUN R -e "devtools::install_github('MEP-LINCS/MEMA@v1.0.1')"
 
 ## (3) Install the rest of R packages for running MEMA vignettes 
 RUN R -e "source('http://depot.sagebase.org/CRAN.R'); pkgInstall('synapseClient')"
